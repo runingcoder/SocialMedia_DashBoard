@@ -93,6 +93,8 @@ Can just use grid only instead. where the code is:: */
   box-sizing: border-box;
 }
 body {
+  transition: background-color 1s;
+
   background-color: var(--primary-bg-color);
 }
 
@@ -143,6 +145,7 @@ hr {
   width: 10%;
   height: 10%;
   object-fit: cover;
+  transition: all 3s ease-out;
 }
 .cardF,
 .cardI,
