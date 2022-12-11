@@ -1,32 +1,117 @@
+/* hover in maathiko cards (cardF, etd) garna, grid ra flex ko mix use garekole bhayena.
+Can just use grid only instead. where the code is:: */
+/* <div class="card fb">
+          <div class="card-header">
+            <img src="images/icon-facebook.svg" alt="fb-icon">
+            <p>@nathanf</p>
+          </div>
+          <div class="card-body">
+            <h1>1987</h1>
+            <p>followers</p>
+          </div>
+          <div class="card-footer">
+            <img src="images/icon-up.svg" alt="up-icon">
+            <p>12 today</p>
+          </div>
+        </div> */
+/* ______ -- this is pretty neat indeed. */
+/* .card {
+  height: 22rem;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--light-bg-card);
+  border-radius: 6px;
+}
+.card-header {
+  grid-column: 2/4; -- look at this.
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.card-header img {
+  width: 3rem;
+  margin-right: 15px;
+}
+.card-header p {
+  font-size: 1.5rem;
+  color: var(--light-blue-text);
+}
+.card-body {
+  grid-column: 2/4;  -- look at this.
+  text-align: center;
+}
+.card-body h1 {
+  font-size: 6rem;
+  color: var(--dark-blue-text);
+  text-align: center;
+}
+.card-body p {
+  font-size: 2rem;
+  color: var(--light-blue-text);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.card-footer {
+  grid-column: 2/4;  -- look at this.
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.card-footer img {
+  width: 1.25rem;
+
+  margin-right: 5px;
+}
+.card-footer p {
+  font-size: 1.25rem;
+  color: var(--lime-green);
+  font-weight: bold;
+  text-transform: capitalize;
+}        */
+
 @font-face {
   font-family: Inter;
   src: url("fonts/static/Inter-Regular.ttf");
 }
+:root {
+  --primary-bg-color: white;
+  --card-bg-color: hsl(227, 47%, 96%);
+  --text-number-color: black;
+}
+.dark {
+  --primary-bg-color: hsl(230, 17%, 14%);
+  --card-bg-color: hsl(228, 28%, 20%);
+  --text-number-color: hsl(0, 0%, 100%);
+}
 
 * {
   font-family: Inter;
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: var(--primary-bg-color);
+}
 
 p.heading {
+  color: var(--text-number-color);
   font-family: Inter;
-
   font-weight: 700;
   margin-bottom: 0.5em;
 }
 
 p.info {
-  color: rgb(32, 30, 30);
+  color: rgb(83, 82, 82);
 
   margin-bottom: 0.5em;
 }
 .infoP {
   font-family: Inter;
   font-size: 0.8em;
-  color: rgb(8, 2, 2);
+  color: rgb(104, 97, 97);
 }
 hr {
   margin-bottom: 0.5em;
@@ -54,24 +139,23 @@ hr {
   justify-content: space-between;
   margin-bottom: 1em;
 }
-img.toggelImg {
+#icon {
   width: 10%;
   height: 10%;
   object-fit: cover;
-  background-color: hsl(230, 22%, 74%);
 }
 .cardF,
 .cardI,
 .cardT,
 .cardY {
-  background-color: hsl(227, 47%, 96%);
+  background-color: var(--card-bg-color);
   display: flex;
   flex-direction: column;
   padding: 20px;
   margin: 10px;
+  border-radius: 0.5em;
 
   min-width: 200px;
-  box-shadow: 0 0 10px #ccc;
 }
 
 .cardF {
@@ -96,6 +180,7 @@ img.toggelImg {
 }
 
 .cardHeader {
+  background-color: var(--card-bg-color);
   display: flex;
   justify-content: center;
 }
@@ -104,22 +189,27 @@ img.icon {
   height: 1.3em;
 }
 .cardBody {
+  background-color: var(--card-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 p.number {
+  color: var(--text-number-color);
   font-size: 2em;
   font-weight: 700;
   font: bold;
 }
 p.smallNumber {
+  color: var(--text-number-color);
   font-size: 1.4em;
   font-weight: 700;
   font: bold;
 }
 p.followers {
+  font-family: Inter;
   letter-spacing: 0.2em;
   color: hsl(228, 7%, 55%);
 }
@@ -143,14 +233,17 @@ p.followers {
   color: hsl(348, 97%, 39%);
 }
 .cardX {
-  background-color: hsl(227, 47%, 96%);
+  background-color: var(--card-bg-color);
 
   display: flex;
   flex-direction: column;
   padding: 20px;
   margin: 10px;
 
-  box-shadow: 0 0 10px #ccc;
+  border-radius: 0.5em;
+}
+.cardX:hover {
+  background-color: hsl(233, 9%, 80%);
 }
 @media (min-width: 500px) {
   .downFlex {
@@ -223,4 +316,9 @@ p.followers {
     justify-content: space-between;
     align-items: center;
   }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--text-number-color);
 }
