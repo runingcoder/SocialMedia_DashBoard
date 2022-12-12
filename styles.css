@@ -79,11 +79,13 @@ Can just use grid only instead. where the code is:: */
   --primary-bg-color: white;
   --card-bg-color: hsl(227, 47%, 96%);
   --text-number-color: black;
+  --follower-color: hsl(228, 7%, 55%);
 }
 .dark {
   --primary-bg-color: hsl(230, 17%, 14%);
   --card-bg-color: hsl(228, 28%, 20%);
   --text-number-color: hsl(0, 0%, 100%);
+  --follower-color: white;
 }
 
 * {
@@ -212,9 +214,10 @@ p.smallNumber {
   font: bold;
 }
 p.followers {
+  text-transform: capitalize;
   font-family: Inter;
   letter-spacing: 0.2em;
-  color: hsl(228, 7%, 55%);
+  color: var(--follower-color);
 }
 .cardFooter {
   display: flex;
