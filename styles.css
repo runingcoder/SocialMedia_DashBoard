@@ -107,6 +107,12 @@ p.heading {
   margin-bottom: 0.5em;
 }
 
+h1 {
+  color: var(--text-number-color);
+  font-family: Inter;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
 p.info {
   color: rgb(83, 82, 82);
 
