@@ -4,19 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/429f2eb390.js" crossorigin="anonymous"> </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Heebo:wght@400;600&family=Inter&family=Lato:wght@700&family=Oswald:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,300;1,400&family=Roboto:ital,wght@0,100;1,500&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor |Social Media DashBoard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
 </head>
 
 <body>
-  <div class="nav">
+  <div class="nav container">
     <div class="head">
       <p class="heading">Social Media Dashboard</p>
       <p class="info">Total Followers: 23,004
@@ -24,19 +26,20 @@
     </div>
     <hr>
     <div class="mode">
-      <p class="infoP">Dark Mode</p>
-      <img src="images/whiteT.png" id='icon' alt="">
-
+      <p id = 'title' class="infoP ">Dark Mode</p>     
+      <i id='icon'class="fa-solid fa-toggle-on"></i>
     </div>
 
-
   </div>
-  <div class="oneBigColumn">
+  <div class="bigBar"></div>
+
+
+  <div class="oneBigColumn container">
 
 
 
 
-    <div class="cardF">
+    <div class=" card cardF">
       <div class="cardHeader">
         <img class="icon" src="images/icon-facebook.svg" alt="">
         <p class="info">@achyutkayastha.7</p>
@@ -53,7 +56,7 @@
       </div>
 
     </div>
-    <div class="cardI borderGrad">
+    <div class=" card cardI borderGrad">
       <div class="cardHeader">
         <img class="icon" src="images/icon-instagram.svg" alt="">
         <p class="info">@achyutkayastha5</p>
@@ -70,7 +73,7 @@
       </div>
 
     </div>
-    <div class="cardT">
+    <div class=" card cardT">
       <div class="cardHeader">
         <img class="icon" src="images/icon-twitter.svg" alt="">
         <p class="info">@achyutAk</p>
@@ -87,7 +90,7 @@
       </div>
 
     </div>
-    <div class="cardY">
+    <div class=" card cardY">
       <div class="cardHeader">
         <img class="icon" src="images/icon-youtube.svg" alt="">
         <p class="info">Achyut Kayastha</p>
@@ -106,8 +109,9 @@
     </div>
   </div>
 
-  <div class="downFlex">
-    <div class="secHeader">Overview - Today</div>
+<div class="secHeader container">Overview - Today</div>
+
+  <div class="downFlex container">
 
     <div class="cardX">
       <div class="mode">
@@ -215,7 +219,7 @@
     Coded by Achyut Kayastha</a>.
   </div>
 
-  <script src="app.js"></script>
+  <script src="main.js"></script>
 
 </body>
 
